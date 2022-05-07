@@ -6,7 +6,7 @@ install :
 
 cd ~/domoticz/plugins
 
-git clone https://github.com/Erwanweb/SSLite.git UPS
+git clone https://github.com/Erwanweb/UPS.git UPS
 
 cd UPS
 
