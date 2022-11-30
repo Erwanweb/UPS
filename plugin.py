@@ -120,7 +120,8 @@ class BasePlugin:
 
         now = datetime.now()
 
-        cmd = 'sudo python3 /home/pi/domoticz/plugins/UPS/readups.py short'
+        #cmd = 'sudo python3 /home/pi/domoticz/plugins/UPS/readups.py short'
+        cmd = 'sudo python3 /home/root/domoticz/plugins/UPS/readups.py short'
         output = sp.getoutput(cmd)
         Domoticz.Debug("Ic2 Info : {}".format(output))
         UPSReadedValues = parseCSV(output)
