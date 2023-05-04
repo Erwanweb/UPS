@@ -1,4 +1,5 @@
-import smbus
+#import smbus -- for python <=3.8
+from smbus2 import SMBus
 import time
 
 # Config Register (R/W)
