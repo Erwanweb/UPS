@@ -1,4 +1,5 @@
-import smbus
+#import smbus -- for python <=3.8
+from smbus2 import smbus
 import time
 import sys
 from ina219 import INA219
