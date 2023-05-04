@@ -60,7 +60,7 @@ class Mode:
 class INA219:
     def __init__(self, i2c_bus=0, addr=0x40): # Pi - i2c_bus=1 - c4 i2c_bus=0
         #self.bus = smbus.SMBus(i2c_bus)
-        self.bus = SMBus.SMBus(i2c_bus)
+        self.bus = SMBus(i2c_bus)
         self.addr = addr
 
         # Set chip to known config values to start
