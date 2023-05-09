@@ -50,7 +50,7 @@ def printshort(voltage, current, power, percent):
     return "{0},{1},{2:1.0f},{3}".format(int(voltage*1000), int(current), power, int(percent))
 
 if __name__=='__main__':
-    ina219 = INA219(addr=0x42)
+    ina219 = INA219(addr=0x41)
     read(ina219, 0)
     time.sleep(2)
     if(len(sys.argv) > 1):
