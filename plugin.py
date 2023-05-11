@@ -197,7 +197,7 @@ class BasePlugin:
                 Domoticz.Log("Power supply is DOWN, Battery is discharging, Battery Level is now at {} %".format(self.BatteryLevel))
                 if self.LastBatteryLevel > self.BatteryLevel : #or (self.LastBatteryLevel = 0) :
                     self.LastBatteryLevel = self.BatteryLevel
-                    if self.CalcTime > self.TIMESEC # or self.CalcTime = 0 :
+                    if self.CalcTime > self.TIMESEC : # or self.CalcTime = 0 :
                         self.CalcTime = self.TIMESEC
                         LastCalcTime = self.CalcTime
                         HourofTR = time.strftime("%H", time.gmtime(LastCalcTime))
