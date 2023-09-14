@@ -19,7 +19,7 @@ def read(ina219, parameter):
     power = ina219.getPower_W() * 1000               # power in mW
     voltage_batt = ina219.getBusVoltage_V() * 1000 # voltage on V- (load side) in mV
     # For UPS HAT (c) - Optimized for 2x 18650 batteries 3350 mAH - full = 8.2, empty 6
-    """
+    
     # percent = (bus_voltage - 6)/2.4*100 # Base calc from WS with 2x 18650 batteries 2600mAh
     # Optimized for 2x 18650 batteries 3350 mAH
     if (voltage_batt >= 8000): percent = (voltage - 6) / 2.15 * 100
@@ -28,8 +28,8 @@ def read(ina219, parameter):
     elif (voltage_batt < 7600) and (voltage_batt >= 7400): percent = (voltage - 6) / 2.3 * 100  #
     elif (voltage_batt < 7400) and (voltage_batt >= 7200): percent = (voltage - 6) / 2.35 * 100  #
     else: percent = (voltage - 6) / 2.4 * 100
-    """
-    percent = (voltage - 6) / 2.2 * 100
+    
+    #percent = (voltage - 6) / 2.2 * 100
     # For UPS 3S full = 12.5, empty 10.1
     #if (voltage_batt >= 12500): percent = 100 # base percent = (voltage - 9) / 3.6
     #else : percent = ((voltage - 9) - 1.1) / 0.025
@@ -38,7 +38,7 @@ def read(ina219, parameter):
         if (percent >= 100):
             percent = 98
     else :
-        if (percent >= 99):
+        if (percent >= 98):
             percent = 100
     if(percent <= 2):percent = 0
     # Time calculation
